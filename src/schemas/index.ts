@@ -9,12 +9,20 @@ const typeDefs =gql`
     id: ID!
     }
 
-    type Query {
+  type Query {
     personCount: Int!
     allPersons: [Person!]!
-    findPerson(name: String!): Person
-    
-    }
+    findPerson(name: String!): Person    
+   }
+
+   type Mutation {
+    addPerson(
+        name: String!
+        phone: String
+        street: String!
+        city: String!
+    ): Person
+   }
 `;
 
 export default typeDefs;
