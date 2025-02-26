@@ -22,6 +22,10 @@ const typeDefs =gql`
         street: String!
         city: String!
     ): Person
+    editNumber(
+        name: String!
+        phone: String!
+    ): Person
    }
 `;
 
